@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <title>Balance</title>
+</head>
+<body>
+  <div class="container">      
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Account</th>
+          <th>Balance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= u1.account %></td>
+          <td><%= u1.balance %></td>
+        </tr>
+        <tr>
+          <td><%= u2.account %></td>
+          <td><%= u2.balance %></td>
+        </tr>
+        <tr>
+          <td><%= u3.account %></td>
+          <td><%= u3.balance %></td>
+        </tr>
+      </tbody>
+    </table>
+  
+
+    <form action="transfer" method="POST">
+      <div class="form-group">
+        <label>From : </label>
+        <input type="text" name="from" class="form-control" placeholder="Enter From">
+      </div>
+      <div class="form-group">
+        <label>To : </label>
+        <input type="text" name="to" class="form-control" placeholder="Enter To">
+      </div>
+      <div class="form-group">
+        <label>Value : </label>
+        <input type="text" name="value" class="form-control" placeholder="Enter Value">
+      </div>
+      <button type="submit" class="btn btn-primary">Transfer</button>
+    </form>
+  </div>  
+</body>
+</html>
