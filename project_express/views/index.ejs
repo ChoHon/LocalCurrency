@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <title>Balance</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<title>Balance</title>
 </head>
 <body>
-  <div class="container">      
+  <div class="container">
+    <h3>Info</h3> 
     <table class="table table-striped">
       <thead>
         <tr>
+          <th>ID</th>
+          <th>name</th>
           <th>Account</th>
           <th>Balance</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><%= u1.account %></td>
-          <td><%= u1.balance %></td>
-        </tr>
-        <tr>
-          <td><%= u2.account %></td>
-          <td><%= u2.balance %></td>
-        </tr>
-        <tr>
-          <td><%= u3.account %></td>
-          <td><%= u3.balance %></td>
+          <td><%= user.id %> </td>
+          <td><%= user.name %> </td>
+          <td><%= user.account %></td>
+          <td><%= user.balance %></td>
         </tr>
       </tbody>
-    </table>
-  
+    </table><br>
+
+    <h3>Log</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>From</th>
+          <th>To</th>
+          <th>Value</th>
+          <th>Memo</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (var obj of rows) { %>
+          <tr>
+            <td><%= obj.T_FROM %></td>
+            <td><%= obj.T_TO %></td>
+            <td><%= obj.T_VALUE %></td>
+            <td><%= obj.T_MEMO %></td>
+            <td><%= obj.T_DATE %></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table><br>
 
     <form action="transfer" method="POST">
       <div class="form-group">
@@ -47,6 +67,10 @@
       <div class="form-group">
         <label>Value : </label>
         <input type="text" name="value" class="form-control" placeholder="Enter Value">
+      </div>
+      <div class="form-group">
+        <label>Memo : </label>
+        <input type="text" name="memo" class="form-control" placeholder="Enter Memo">
       </div>
       <button type="submit" class="btn btn-primary">Transfer</button>
     </form>
