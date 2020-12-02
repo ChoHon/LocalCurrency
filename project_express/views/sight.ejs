@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/carousel.css" rel="stylesheet">
+
+    <title>문화페이 - 관광지</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">문화페이</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/home">홈</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/sight">관광지 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/shop">가맹점</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    거래
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="/deposit">문화페이 받기</a>
+                  <a class="dropdown-item" href="/withdraw">결제하기</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/log">이용내역</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+
+    <br>
+    <div class="album py-5 bg-light">
+        <div class="container">
+          <h3 class="text-center font-weight-bold">관광지</h3><br>
+          <div class="row">
+            <div class="col-md-4 ml-1 mr-1">                
+                <div class="card mb-4 shadow-sm">
+                    <a href="/sight/01">
+                        <img src='../images/무령왕릉_01.jpg' width="100%" height="225">
+                    </a>
+                    <div class="card-body">
+                    <p class="card-text text-center h4 mb-3">무령왕릉</p>
+                    </div>
+                </div>                
+            </div>
+            <div class="col-md-4 ml-1 mr-1">
+                <div class="card mb-4 shadow-sm">
+                    <a href="/sight/02">
+                        <img src='../images/공산성_01.jpg' width="100%" height="225">
+                    </a>
+                    <div class="card-body">
+                    <p class="card-text text-center h4 mb-3">공산성</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ml-1 mr-1">
+                <div class="card mb-4 shadow-sm fix">
+                    <a href="/sight/01">
+                        <img src='../images/국립공주박물관_01.jpg' width="100%" height="225">
+                    </a>
+                    <div class="card-body">
+                    <p class="card-text text-center h4 mb-3">국립공주박물관</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

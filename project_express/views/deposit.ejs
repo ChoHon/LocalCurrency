@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link href="/stylesheets/carousel.css" rel="stylesheet">
+
+    <title>문화페이 - 입금</title>
+</head>
+<body>
+    <div class='container'>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="#">문화페이</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">홈</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/sight">관광지</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/shop">가맹점</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                        거래 <span class="sr-only">(current)</span>
+                    </a>
+                    <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/deposit">문화페이 받기</a>
+                    <a class="dropdown-item" href="/withdraw">결제하기</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/log">이용내역</a>
+                </li>
+            </ul>
+            </div>
+        </nav><br>
+
+        
+        <form action="transfer_deposit" method="POST">
+            <h3 class="text-center font-weight-bold">문화페이 받기</h3><br>
+            <table class="table">
+                <tbody class="text-center">
+                    <tr>
+                        <td style="width: 3cm;">받는 사람</td>
+                        <td><%= user.name %> </td>
+                    </tr>
+                    <tr>
+                        <td>문화페이</td>
+                        <td name='value'>5000</td>
+                    </tr>
+                    <tr>
+                        <td>장소</td>
+                        <td name='memo'>무령왕릉</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="text-center">
+                <button type="submit" class="btn btn-secondary">Transfer</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
